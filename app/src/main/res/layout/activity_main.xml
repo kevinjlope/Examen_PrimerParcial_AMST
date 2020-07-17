@@ -9,7 +9,8 @@
     <TextView
         android:layout_width="180dp"
         android:layout_height="15dp"
-        android:text="Hello World!"
+        android:text="Bienvenido a megacine, TRIVIA
+                        Conteste las siguientes preguntas ganara una entrada al cine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
