@@ -3,6 +3,7 @@ package com.example.examen_1merparcial;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,7 @@ public class pantalla extends AppCompatActivity {
     private ArrayList<String> respuestasValidas;
     private ArrayList<String> todasResp;
     private static final Random ran = new Random();
+    private boolean respuestaCorrecta = false;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -38,8 +40,7 @@ public class pantalla extends AppCompatActivity {
         cargarPreguntas();
         cargarMapaAP();
         mostrarinfoAplicacion();
-        //leerPreguntas();
-       // preguntaM.setText(preguntas.get(0));
+
 
     }
 
@@ -64,6 +65,8 @@ public class pantalla extends AppCompatActivity {
         //Toast.makeText()
 
     }
+
+
 
     public void cargarPreguntas(){
         preguntas = new ArrayList<>();
@@ -105,19 +108,34 @@ public class pantalla extends AppCompatActivity {
         }
     }*/
 
-    public void respuestaUno(View view){
+    public void ganador(){
+        Intent i = new Intent(this, Ganador.class);
+        startActivity(i);
+        finish();
+    }
 
+    public void perdedor(){
+        Intent i = new Intent(this, perdedor.class);
+        startActivity(i);
+        finish();
+    }
+
+    public void verificarGanador(){
+        
+    }
+    public void respuestaUno(View view){
+        perdedor();
     }
 
     public void respuestaDos(View view){
-
+        perdedor();
     }
 
     public void respuestaTres(View view){
-
+        perdedor();
     }
 
     public void respuestaCuatro(View view){
-
+        perdedor();
     }
 }
